@@ -1,17 +1,56 @@
-fps_max 301
+fps_max 321
 
 
-mat_setvideomode 1920 1080 1
-mat_setvideomode 1920 1080 0
+mat_postprocess_enable 0
+
+
+r_shadows 0
+
+
+fog_enable 0
+
+
+mat_motion_blur_enabled 0
+
+
+mat_queue_mode 2
+
+
+r_dynamic 0
+
+
+cl_forcepreload 1
+
+
+mat_vsync 0
+
+
+
+
+
+
+
+
+
+mat_setvideomode 2560 1440 1
+mat_setvideomode 2560 1440 0
+
+
+
+
+
+
 
 
 
 
 // Font
 
-reloadfont "mat_setvideomode 1920 1080 1; mat_setvideomode 1920 1080 0"
+reloadfont "mat_setvideomode 2560 1440 1; mat_setvideomode 2560 1440 0"
 
 reloadfont
+
+
 
 
 
@@ -24,26 +63,42 @@ net_graphpos 330 - change position
 
 
 
+
+
+
+
+
 sensitivity 1.8
+
+
+
 
 
 
 
 mat_monitorgamma 1.6
 
-
 mat_monitorgamma_tv_enabled 1
 
 
-fov_desired 90.480003
 
 
 
 
-alias views_65 "echo " 65 viewmodelfovsurvivor ";cl_viewmodelfovsurvivor 65 ;alias changeview views_105"
-alias views_105 "echo " 105 viewmodelfovsurvivor ";cl_viewmodelfovsurvivor 105 ;alias changeview views_65"
-alias changeview "views_105"
+
+
+fov_desired 105.239998
+
+
+
+
+
+
+alias views_24 "echo " 24 viewmodelfovsurvivor ";cl_viewmodelfovsurvivor 24 ;alias changeview views_75"
+alias views_75 "echo " 75 viewmodelfovsurvivor ";cl_viewmodelfovsurvivor 75 ;alias changeview views_24"
+alias changeview "views_75"
 bind "F3" "changeview"
+
 
 
 
@@ -53,6 +108,11 @@ bind "F4" "cl_viewmodelfovsurvivor 180"
 
 
 
+
+
+
+
+bind "l" "record fix; stop"
 
 bind "DOWNARROW" "cl_crosshair_dynamic 0"
 
@@ -88,36 +148,22 @@ alias "-showscores_custom" "-showscores;net_graph 1";
 
 
 
+
+
+
+
+
 //NETWORKING
-cl_updaterate           "100"       //Number of packets per second of updates you are requesting from the server
-cl_cmdrate          "100"       //Max number of command packets sent to server per second
-rate                "100000"    //Max bytes/sec the host can receive data  
-cl_interp           "0"     //Interpolate object positions starting this many seconds in past
-cl_interp_ratio         "-1"        //Sets the interpolation amount (final amount is cl_interp_ratio / cl_updaterate)
-cl_lagcompensation      "1"     //Perform server side lag compensation of weapon firing events.
-cl_resend           "1.5"       //Delay in seconds before the client will resend the 'connect' attempt
-cl_timeout          "20"        //After this many seconds without receiving a packet from the server, the client will disconnect itself
-net_allow_multicast     "0"
-sv_region           "3"     //The region of the world to report this server in.
-net_splitpacket_maxrate     "30000"     //Max bytes per second when queueing splitpacket chunks
-net_splitrate           "3"     //Number of fragments for a splitpacket that can be sent per frame
-net_maxroutable         "1200"      //Requested max packet size before packets are split.
 
-
-
-
-
-
-
-
-// Default Crosshair
-
-cl_crosshair_alpha 255
-cl_crosshair_blue 220
-cl_crosshair_dynamic 1
-cl_crosshair_green 182
-cl_crosshair_red 138 
-cl_crosshair_thickness 2
+rate                                            "127000"
+cl_cmdrate                                      "127"
+cl_updaterate                                   "127"
+cl_interp                                       "0.0167"  
+cl_interp_ratio                                 "0"
+sv_minrate                                      "25000"             
+sv_mincmdrate                                   "93"             
+sv_maxcmdrate                                   "127"             
+sv_maxrate                                      "127000"
 
 
 
@@ -129,99 +175,39 @@ cl_crosshair_thickness 2
 
 
 
-//Glows - Learning
 
- "Supervivientes (Survivor) - Color Azul Tono Claro"
 
-cl_glow_survivor_b 1
-cl_glow_survivor_g 0.2
-cl_glow_survivor_r 0
 
-  "Infectado de agarre cogiendo al superviviente, Hunter,Jockey,Charger(Survivor) - Color Violeta"
+// pink crosshair
 
-cl_glow_ability_b 1
-cl_glow_ability_r 0.5
-cl_glow_ability_g 0
+cl_crosshair_red 238 ;
+cl_crosshair_green 138;
+cl_crosshair_blue 238
+cl_crosshair_thickness "4"
 
-  "Superviviente Incapacitado o cogido por infectado (Survivor) - Color Rojo"
 
-cl_glow_survivor_hurt_r 1
-cl_glow_survivor_hurt_g 0
-cl_glow_survivor_hurt_b 0
- 
- "Objetos de cerca(survivor) - Color Azul"
 
-cl_glow_item_b 1
-cl_glow_item_g 0
-cl_glow_item_r 0
 
- "Objetos de Distancia(survivor) - Purpura" 
 
-cl_glow_item_far_b 1
-cl_glow_item_far_g 0
-cl_glow_item_far_r 1
 
- "Superviviente vomitado (Survivor) - Color Verde Tono Claro"
 
-cl_glow_survivor_vomit_r 0
-cl_glow_survivor_vomit_g 1
-cl_glow_survivor_vomit_b 0.2
- 
- "Superviviente vomitado (Infected) - Color Verde Transparente"
 
-cl_glow_infected_vomit_r 0.2
-cl_glow_infected_vomit_g 1
-cl_glow_infected_vomit_b 0.5
- 
- "Infectado regenerado (Infected) - Color Morado"
 
-cl_glow_infected_g 0
-cl_glow_infected_b 1
-cl_glow_infected_r 0.2
- 
- "Infectado fantasma (Infected) - Color Celeste"
 
-cl_glow_ghost_infected_b 1
-cl_glow_ghost_infected_g 1
-cl_glow_ghost_infected_r 0
 
- "Superviviente con salud Alta (Infected) - Color Verde"
 
-cl_glow_survivor_health_high_g 1
-cl_glow_survivor_health_high_b 0
-cl_glow_survivor_health_high_r 0
 
- "Superviviente con salud Media (Infected) - Color Amarillo
 
-cl_glow_survivor_health_med_b 0
-cl_glow_survivor_health_med_g 1
-cl_glow_survivor_health_med_r 1
 
- "Superviviente con salud baja(Infected) - Color Naranja"
 
-cl_glow_survivor_health_low_b 0
-cl_glow_survivor_health_low_r 1
-cl_glow_survivor_health_low_g 0.2
 
- "Superviviente con salud Critica(Infected) - Color Rosado"
 
-cl_glow_survivor_health_crit_b 0.2
-cl_glow_survivor_health_crit_g 0
-cl_glow_survivor_health_crit_r 1
 
- "Objetos de Tank(Infected) y Objetos estando en blanco y negro(Survivor) - Color Verde Limon"
 
-cl_glow_thirdstrike_item_r 0.4
-cl_glow_thirdstrike_item_g 1
-cl_glow_thirdstrike_item_b 0
 
- "Parpadeo cuando desangra(Infected)"
 
-cl_glow_survivor_health_bleed_pulse 1
-cl_glow_survivor_health_bleed_pulse_amount 1
-cl_glow_survivor_health_bleed_pulse_speed 50
-cl_glow_survivor_health_include_buffer 1
 
+	
 
 
 
@@ -238,6 +224,8 @@ cl_glow_survivor_health_include_buffer 1
 bind "MWHEELUP" "+jump"
 bind "MWHEELDOWN" "+jump"
 bind "SPACE" "+jump"
+
+
 
 
 
@@ -268,6 +256,9 @@ alias checkfwd;
 alias checkback; 
 alias checkleft; 
 alias checkright;
+
+
+
 
 
 
