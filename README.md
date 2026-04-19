@@ -25,6 +25,12 @@ cl_forcepreload 1
 mat_vsync 0
 
 
+m_rawinput 1
+
+
+m_customaccel 0
+
+
 
 
 
