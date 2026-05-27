@@ -93,7 +93,7 @@ mat_monitorgamma_tv_enabled 1
 
 
 
-fov_desired 105.239998
+fov_desired 117.119995 
 
 
 
@@ -308,8 +308,6 @@ alias checkfwd;
 alias checkback; 
 alias checkleft; 
 alias checkright;
-
-
 
 
 
