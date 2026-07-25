@@ -93,17 +93,11 @@ mat_monitorgamma_tv_enabled 1
 
 
 
-fov_desired 117.119995 
+fov_desired 105.239998  
 
 
 
 
-
-
-alias views_24 "echo " 24 viewmodelfovsurvivor ";cl_viewmodelfovsurvivor 24 ;alias changeview views_75"
-alias views_75 "echo " 75 viewmodelfovsurvivor ";cl_viewmodelfovsurvivor 75 ;alias changeview views_24"
-alias changeview "views_75"
-bind "F3" "changeview"
 
 
 
@@ -139,6 +133,7 @@ bind "o" "say_team !bonus"
 bind "u" "say_team Go Go Go!"
 
 bind "i" "say_team >HELP<"
+
 
 
 
@@ -204,48 +199,46 @@ cl_crosshair_thickness 2
 
 
 
-alias GlowItem0;
-alias GlowItem1;
-alias GlowItem2;
-alias GlowItemPart0;
-alias GlowItemPart1;
-alias GlowItemRestart;
+------------------YisusCL Glows---------------
+cl_glow_item_r 1; cl_glow_item_g 1; cl_glow_item_b 0.2"
 
-alias GlowItemFar0;
-alias GlowItemFar1;
-alias GlowItemFar2;
-alias GlowItemFarPart0;
-alias GlowItemFarPart1;
-alias GlowItemFarRestart;
+cl_glow_item_far_r 1; cl_glow_item_far_g 1; cl_glow_item_far_b 1"
 
+cl_glow_thirdstrike_item_r 1; cl_glow_thirdstrike_item_g 1; cl_glow_thirdstrike_item_b 1"
 
-alias survivorHurt;
+cl_glow_ghost_infected_r 1; cl_glow_ghost_infected_g 1; cl_glow_ghost_infected_b 1"
 
-alias GlowThirdStrikeItem0;
-alias GlowThirdStrikeItem1;
-alias GlowThirdStrikeItem2;
-alias GlowThirdStrikeItemPart0;
-alias GlowThirdStrikeItemPart1;
-alias GlowThirdStrikeItemRestart;
+cl_glow_infected_r 0; cl_glow_infected_g 0; cl_glow_infected_b 1"
 
-alias GlowIncludeBuffer;
+cl_witch_glow_idle_r 1; cl_witch_glow_idle_g 0.2; cl_witch_glow_idle_b 1"
 
+cl_witch_glow_angry_r 0; cl_witch_glow_angry_g 1; cl_witch_glow_angry_b 0"
 
-cl_glow_ability_r 0; cl_glow_ability_g 1; cl_glow_ability_b 1
-cl_glow_ghost_infected_r 0; cl_glow_ghost_infected_g 1; cl_glow_ghost_infected_b 0.5
-cl_glow_infected_r 0; cl_glow_infected_g 0; cl_glow_infected_b 1
-cl_glow_infected_vomit_r 0.25; cl_glow_infected_vomit_g 0.75; cl_glow_infected_vomit_b 1
-cl_glow_item_r 1; cl_glow_item_g 0; cl_glow_item_b 1
-cl_glow_item_far_r 0; cl_glow_item_far_g 1; cl_glow_item_far_b 1
-cl_glow_survivor_r 1; cl_glow_survivor_g 0.5; cl_glow_survivor_b 0
-cl_glow_survivor_health_high_r 0; cl_glow_survivor_health_high_g 1; cl_glow_survivor_health_high_b 0
-cl_glow_survivor_health_med_r 1; cl_glow_survivor_health_med_g 1; cl_glow_survivor_health_med_b 0
-cl_glow_survivor_health_low_r 1; cl_glow_survivor_health_low_g 0; cl_glow_survivor_health_low_b 0
-cl_glow_survivor_hurt_r 1; cl_glow_survivor_hurt_g 1; cl_glow_survivor_hurt_b 1
-cl_glow_survivor_vomit_r 0.25; cl_glow_survivor_vomit_g 0.75; cl_glow_survivor_vomit_b 1
-cl_glow_thirdstrike_item_r 1; cl_glow_thirdstrike_item_g 0; cl_glow_thirdstrike_item_b 1
-cl_glow_survivor_health_bleed_pulse_amount 0;cl_glow_survivor_health_bleed_pulse 0
-cl_glow_survivor_health_include_buffer 0
+cl_glow_ability_r 1; cl_glow_ability_g 1; cl_glow_ability_b 0.2"
+
+cl_glow_survivor_hurt_r 1; cl_glow_survivor_hurt_g 0; cl_glow_survivor_hurt_b 0"
+
+cl_glow_survivor_health_high_r 0; cl_glow_survivor_health_high_g 1; cl_glow_survivor_health_high_b 0"
+
+cl_glow_survivor_health_med_r 0.80; cl_glow_survivor_health_med_g 1; cl_glow_survivor_health_med_b 0.015"
+ 
+cl_glow_survivor_health_low_r 0.807; cl_glow_survivor_health_low_g 0.419; cl_glow_survivor_health_low_b 0.027"
+
+cl_glow_survivor_health_crit_r 1; cl_glow_survivor_health_crit_g 0.015; cl_glow_survivor_health_crit_b 0.015"
+
+cl_glow_survivor_r 0; cl_glow_survivor_g 1; cl_glow_survivor_b 0"
+
+cl_glow_infected_vomit_r 0.6; cl_glow_infected_vomit_g 0.2; cl_glow_infected_vomit_b 1"
+
+cl_glow_survivor_vomit_r 0.592; cl_glow_survivor_vomit_g 0.2; cl_glow_survivor_vomit_b 1"
+
+cl_glow_survivor_health_bleed_pulse 1
+ 
+cl_glow_survivor_health_bleed_pulse_amount 1
+ 
+cl_glow_survivor_health_bleed_pulse_speed 30
+ 
+cl_glow_survivor_health_include_buffer 1
 
 
 
