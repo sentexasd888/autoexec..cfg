@@ -104,6 +104,10 @@ fov_desired 105.239998
 
 
 bind "F4" "cl_viewmodelfovsurvivor 180"
+bind "F3" "cl_viewmodelfovsurvivor 95"
+
+
+
 
 
 
